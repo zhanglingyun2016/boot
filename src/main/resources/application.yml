@@ -1,0 +1,29 @@
+server:
+  port: 8080
+#DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&useSSl=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/flog?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 1234
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+
+
+maker:
+  jwt:
+    # 加密秘钥
+    secire: f4e2520348f86b7cde581c0f9eb5
+    # token有效时间
+    expire: 604800
+    header: Authorization
+
+
+
